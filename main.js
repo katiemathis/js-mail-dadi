@@ -26,6 +26,10 @@ for (let i = 0; i < mailList.length; i++) {
     }
 }
 
+//user può giocare -- far vedere le istruzioni del gioco
+//crea un evento quando il giocatore clicca il bottone
+//crea degli alert in base all'output
+
 const button = document.querySelector('button');
 
 let number;
