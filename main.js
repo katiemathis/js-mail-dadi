@@ -16,6 +16,7 @@ for (let i = 0; i < mailList.length; i++) {
     if(mailList[i] == email) {
         login = true;
         console.log('success');
+        document.getElementById('hidden').innerHTML ='<p>Ora si gioca contro il computer. Chi sceglie il numero più alto, vince. Per giocare... </p><button type="button" class="btn btn-primary ms-1">Clicca qui</button>'
     } 
 
     if(login == true) {
@@ -24,3 +25,9 @@ for (let i = 0; i < mailList.length; i++) {
         document.getElementById('accesso').innerHTML = 'Mi dispiace - non hai accesso a questa pagina';
     }
 }
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+  prompt('Inserisci un numero da 1 a 6:');
+});
