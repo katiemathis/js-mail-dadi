@@ -29,27 +29,35 @@ for (let i = 0; i < mailList.length; i++) {
 const button = document.querySelector('button');
 
 let number;
-let computerNumber = console.log('il computer ha scelto' + getRandomArbitrary);
+let computerNumber; 
+
 
 button.addEventListener('click', event => {
     number = prompt('Inserisci un numero da 1 a 6:');
 
-    function getRandomArbitrary(min, max) {
-        return  Math.floor(Math.random() * (5) + 1);
- 
+    function getRandomInt(min, max) {
+        return  Math.floor(Math.random() * (6 - 1) + 1);
+
     }
 
-    computerNumber;
-    console.log('user ha scelto' + number);
+    computerNumber = (getRandomInt(7));
 
+    console.log('il computer ha scelto    ' + computerNumber);
+    console.log('user ha scelto    ' + number);
+
+
+    
+    if(computerNumber > number) {
+        alert('Il computer ha scelto ' + computerNumber + '.  Mi dispiace, hai perso!')
+    } else if(computerNumber < number) {
+        alert('Il computer ha scelto   ' + computerNumber + '.  Congratulazioni! Hai vinto!!')
+    } else {
+        alert('Avete scelto lo stesso numero! Pareggio!')
+    }
 
 });
 
-if(getRandomArbitrary > number) {
-    alert('Il computer ha scelto' + getRandomArbitrary + '. Mi dispiace, hai perso!')
-} else {
-    alert('Il computer ha scelto' + getRandomArbitrary + 'Congratulazioni! Hai vinto!!')
-}
+
 
 
 
